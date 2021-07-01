@@ -18,6 +18,8 @@ public class Skladnik {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
     @OneToMany(mappedBy = "skladnik")
     private Set<IloscSkladnika> iloscSkladnika;
 }

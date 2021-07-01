@@ -39,6 +39,11 @@ public class Account implements UserDetails {
     @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)
     private Set<FavouriteDogName> favouriteDogNames;
 
+    @ToString.Exclude
+    @JsonBackReference
+    @OneToMany(mappedBy = "creator", fetch = FetchType.LAZY)
+    private Set<Przepis> createdRecipes;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles.stream()

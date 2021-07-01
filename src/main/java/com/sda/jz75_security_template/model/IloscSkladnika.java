@@ -27,4 +27,6 @@ public class IloscSkladnika {
     @JsonBackReference
     @EqualsAndHashCode.Exclude
     private Skladnik skladnik;
+
+    private double ilosc;
 }

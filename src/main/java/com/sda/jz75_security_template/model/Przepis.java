@@ -20,6 +20,11 @@ public class Przepis {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
     @OneToMany(mappedBy = "przepis")
     private Set<IloscSkladnika> iloscSkladnikow;
+
+    @ManyToOne()
+    private Account creator;
 }

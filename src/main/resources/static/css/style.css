@@ -35,3 +35,10 @@ html {
     font-style: normal;
     color: white;
 }
+
+table{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
