@@ -1,0 +1,30 @@
+Składnik
+- nazwa
+- rodzaj (warzywo/owoc/przyprawa/inne)
+
+1. Dodanie encji składnik i dodanie kontrolera do zarządzania
+ - model (stworzenie modelu) (luźna encja, nie jest powiązana z Account)
+ - repository
+ - service
+ - controller (zabezpieczyć przed dostępem od osób które nie są zalogowane) (CRUD)
+
+ a. stworzenie modelu
+ b. stworzenie repository
+ c. stworzenie service.
+ d. stworzenie controllera. Podczas tworzenia metod controller'a uzupełniamy metody serwisu.
+    - create (dodaj składnik)
+    - list (wylistuj składniki które są dostępne)
+    - delete
+    - edit nie robimy!!! Zamiast edit możemy usunąć składnik i dodać go ponownie, to uprości działanie.
+ e. dodać @PreAuthorize lub @Secured
+
+2. Stworzenie encji Przepis i IloscSkladnika.
+ - IloscSkladnika posiada pole: Skladnik, ilosc, jednostka, twórca (Account), opis wykonania dania
+ - Przepis posiada pole Set<IloscSkladnika>, nazwa ...
+ a. Dodawanie przepisu (tworzymy ale przepis na początku nie ma ilości składników)
+ b. Stworzenie strony edycji na której mamy guzik do formularza "dodaj składnik".
+ c. stworzenie formularza składnika gdzie wybieramy Składnik, wpisujemy ilość i podajemy jednostkę.
+
+3. Umożliwienie użytkownikowi przeglądania przepisów
+4. Dodanie możliwości "polubienia" lub dodania do "ulubionych" (W Account trzeba stworzyć set ulubionych przepisów.
+

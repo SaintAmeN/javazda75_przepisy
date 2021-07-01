@@ -4,11 +4,9 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 import java.util.Set;
@@ -62,4 +60,11 @@ public class Account implements UserDetails {
     public int hashCode() {
         return Objects.hash(id, username, password);
     }
+
+    // PRZEPIS (OneToMany (collection)iloscSkladnika)
+    // MANY TO MANY (PRZEPIS może mieć wiele ilości składników)
+    // MANY TO MANY (ILOSC SKLADNIKA może być przypisana do wielu przepisów)
+    // ILOSC SKLADNIKA (ManyToOne przepis) (ManyToOne )
+    //
+    // SKLADNIK (OneToMany) składnik może być użyty wile razy w różnych ilościach
 }
